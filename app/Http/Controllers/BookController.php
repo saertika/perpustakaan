@@ -106,4 +106,9 @@ class BookController extends Controller
         $book->delete();
         return redirect()->route('books.index')->with('success', 'Buku berhasil dihapus!');
     }
+    public function beranda()
+{
+    // Cukup panggil view-nya aja, gak usah kirim data apa-apa lagi
+    return view('beranda');
+}
 }
