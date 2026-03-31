@@ -23,10 +23,10 @@
                 <td>{{ $cat->deskripsi }}</td>
                 <td>{{ $cat->books_count }}</td>
                 <td>
-                    <a href="{{ route('categories.edit', $cat->id) }}" class="btn btn-warning btn-sm">Edit</a>
+                    <a href="{{ route('categories.edit', $cat->id) }}" class="btn btn-info btn-sm">Edit</a>
                     <form action="{{ route('categories.destroy', $cat->id) }}" method="POST" class="d-inline">
                         @csrf @method('DELETE')
-                        <button class="btn btn-danger btn-sm" onclick="return confirm('Yakin hapus?')">Hapus</button>
+                        <button class="btn btn-primary btn-sm" onclick="return confirm('Yakin hapus?')">Hapus</button>
                     </form>
                 </td>
             </tr>
