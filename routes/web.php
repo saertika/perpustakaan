@@ -5,8 +5,9 @@ use App\Http\Controllers\BookController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController; 
 
-// Halaman Login (Hanya bisa diakses kalau belum login)
-Route::get('/', [AuthController::class, 'showLogin'])->name('login')->middleware('guest');
+Route::get('/', [AuthController::class, 'showLogin'])->name('login'); 
+
+// Proses Login (Kirim Data) - Ini yang cuma support POST
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
